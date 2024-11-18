@@ -10,7 +10,7 @@ let dragStartIndex;
 
 addBtn.addEventListener("click", () => {
   if (isInputVisible) {
-    if (input.value !== "") {
+    if (input.value.trim() !== "") {
       notes.push(input.value);
       addNote(notes);
       input.value = "";
