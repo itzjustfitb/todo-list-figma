@@ -67,11 +67,11 @@ let isSorted = false;
 sort.addEventListener("click", () => {
   if (notes.length) {
     if (!isSorted) {
-      notes.sort((a, b) => (a > b ? -1 : 1));
+      notes.sort((a, b) => b.localeCompare(a));
       isSorted = true;
       sort.style.transform = "rotate(180deg)";
     } else {
-      notes.sort((a, b) => (a > b ? 1 : -1));
+      notes.sort((a, b) => a.localeCompare(b));
       sort.style.transform = "rotate(0deg)";
       isSorted = false;
     }
